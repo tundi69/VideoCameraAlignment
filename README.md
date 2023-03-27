@@ -5,19 +5,19 @@ Problem: When you need to use two cameras for streaming or making a video (most 
 
 I wrote this software to align the two camera’s previews. It can be a part of the calibration process for companies, that manufacture conference cameras with built-in camera systems, or for individuals who glue together two cameras… 😊
 
-Dependencies:
+**Dependencies:**
 
     OpenCV 4.6.0
     Java 1.8.0_341
 
 It's written and developed on Windows 10, using IntelliJ.
 
-About the cameras I used:
+**About the cameras I used:**
 
 I used an “HD pro webcam C920” from Logitech and my laptop’s built-in camera. It is better to use the same type of camera with the same light sensitivity, color spectrum...
 
 
-Describing the software:
+**Describing the software:**
 
 The first step towards the solution is detecting keyPoints in both cameras' previews and then finding the corresponding ones.
 
