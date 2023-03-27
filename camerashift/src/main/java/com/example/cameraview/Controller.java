@@ -164,6 +164,7 @@ public class Controller {
                     if (capture.isOpened()) {
                         try {
                             capture.read(frame1);
+
                             if (!frame1.empty()) {
                                 Imgproc.cvtColor(frame1, frame1, Imgproc.COLOR_BGR2GRAY);
                             }
