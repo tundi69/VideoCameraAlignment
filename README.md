@@ -28,5 +28,6 @@ Then the software calculates the average of the coordinates of the better_matche
 With the direction and degree of the shift, the software automatically selects selects the part of the second camera image (by setting the viewport to the imageView), which fits the image of the first camera.
 
  ![gitar](https://user-images.githubusercontent.com/58810213/227979299-e1db3467-f845-40b8-a238-5765cfa15979.jpg)
+ 
 The picture is a screenshot of the working app. The red dots are keypoints what the detector doesn't find match, blue ones the matching keypoints, the green is the matching keypoint average in every preview, the white one is the center of the screen.
-
+The top pictures are taken by the two cameras, and the lower one is the result of the alignment.
