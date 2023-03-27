@@ -1,0 +1,13 @@
+.button {
+    -fx-text-fill: #000080;
+    -fx-padding: 5px;
+
+}
+.default-color0.chart-pie { -fx-pie-color: #ffd700; }
+.default-color1.chart-pie { -fx-pie-color: #ffa500; }
+.default-color2.chart-pie { -fx-pie-color: #ffd700; }
+.default-color3.chart-pie { -fx-pie-color: #ffa500; }
+
+.root {
+    -fx-background-color: #6495ed
+}
