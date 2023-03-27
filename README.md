@@ -1,4 +1,4 @@
-# VideoCameraAlignment
+# Video Camera Alignment
 Alignment of two cameras in case you would like to use them alternately, and need a seamless transition between their preview.
 
 Problem: When you need to use two cameras for streaming or making a video (most of the time one with a wide angle and another one with narrow lenses) even if you put them very close to each other, they will see the scene from a different angle. Switching between the two cameras, you will see a shift in the preview, it won’t be seamless.
@@ -10,7 +10,7 @@ Dependencies:
     OpenCV 4.6.0
     Java 1.8.0_341
 
-It's written and developed on Windows 10
+It's written and developed on Windows 10, using IntelliJ.
 
 About the cameras I used:
 
