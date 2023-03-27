@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<Pane prefHeight="750.0" prefWidth="1386.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cameraview.Controller">
+
+    <children>
+        <HBox>
+            <ImageView fx:id="currentFrame" fitHeight="375" fitWidth="501" />
+            <ImageView fx:id="currentFrame2" fitHeight="375" fitWidth="501" />
+        </HBox>
+       
+    </children>
+   <Label fx:id="otherGoodResultDisplay" layoutX="802.0" layoutY="623.0" prefHeight="126.0" prefWidth="365.0" style="-fx-font-size: 14" wrapText="true">
+      <font>
+         <Font name="Britannic Bold" size="18.0" />
+      </font>
+   </Label>
+    <Label fx:id="resultDisplay" layoutX="788.0" layoutY="574.0" prefHeight="53.0" prefWidth="412.0" text="">
+      <font>
+         <Font name="Britannic Bold" size="24.0" />
+      </font></Label>
+    <StackPane layoutX="250.0" layoutY="375.0" prefHeight="375.0" prefWidth="500.0" style="-fx-background-color: black;">
+        <ImageView fx:id="currentFrame3" fitHeight="375" fitWidth="501" />
+    </StackPane>
+    <PieChart fx:id="pieChart" layoutX="757.0" layoutY="409.0" legendSide="RIGHT" legendVisible="false" prefHeight="164.0" prefWidth="410.0" />
+     <Button fx:id="StartButton" layoutX="1223.0" layoutY="573.0" minWidth="-Infinity" onAction="#startCameras" text="Start Alignment" />
+     <Button fx:id="StopButton" layoutX="1223.0" layoutY="600.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#stopCameras" prefHeight="27.0" prefWidth="93.0" text="Stop Cameras" />
+   <TextField fx:id="keypointSubset" layoutX="1216.0" layoutY="123.0" onAction="#startCameras" text="100" />
+   <TextField fx:id="goodResultThr" layoutX="1216.0" layoutY="173.0" onAction="#startCameras" text="50" />
+   <Label layoutX="1039.0" layoutY="125.0" prefHeight="39.0" prefWidth="175.0" text="best keypoint subset size (10-9999))" wrapText="true">
+      <font>
+         <Font name="Calibri Light Italic" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="1039.0" layoutY="172.0" prefHeight="39.0" prefWidth="175.0" text="good result threshold (10-999)" wrapText="true">
+      <font>
+         <Font name="Calibri Light Italic" size="14.0" />
+      </font></Label>
+   <Label layoutX="1039.0" layoutY="256.0" prefHeight="22.0" prefWidth="175.0" text="Homography confidence (0-1)">
+      <font>
+         <Font name="Calibri Light Italic" size="14.0" />
+      </font></Label>
+   <Label layoutX="1039.0" layoutY="286.0" prefHeight="22.0" prefWidth="175.0" text="Reproject. err. threshold (1-20)">
+      <font>
+         <Font name="Calibri Italic" size="14.0" />
+      </font></Label>
+   <Slider fx:id="reprojectError" blockIncrement="1.0" layoutX="1214.0" layoutY="290.0" majorTickUnit="10.0" max="20.0" minorTickCount="4" prefHeight="14.0" prefWidth="149.0" showTickMarks="true" value="10.0" />
+   <Slider fx:id="confidence" blockIncrement="1" layoutX="1214.0" layoutY="260.0" max="10.0" prefHeight="14.0" prefWidth="149.0" value="9.95">
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor></Slider>
+   <Button fx:id="saveResult" layoutX="1223.0" layoutY="652.0" mnemonicParsing="false" onAction="#saveResult" prefHeight="27.0" prefWidth="93.0" text="Save result" />
+    <stylesheets>
+        <URL value="@application.css" />
+    </stylesheets>
+
+
+</Pane>
